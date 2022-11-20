@@ -1,0 +1,67 @@
+  // Обнуление стилей
+@import "nullstyle";
+  // Обнуление стилей_____________________
+
+  // Подключение шрифтов
+@import url(https://fonts.googleapis.com/css?family=Roboto:regular);
+@import url(https://fonts.googleapis.com/css?family=Rubik:regular);
+
+@import "fonts";  
+  // Подключение шрифтов__________________
+
+  // Переменные
+$maxWidthConteiner: 1366;
+$md: $maxWidthConteiner + 40;
+$md1: 991;
+$md2: 767;
+$md3: 479;
+$black: #222224;
+$white: #EFEFEF;
+$orange: #EA4C14;
+
+  // Переменные___________________________
+
+  // Шаблоны
+  // Шаблоны______________________________
+
+  // Миксины
+@mixin font ($ff: 'Roboto', $fw: 400, $fs: 22px, $lh: 27px, $ls: 0.01em) {
+    font-family: $ff;
+    font-weight: $fw;  
+    font-size: $fs;
+    line-height: $lh;
+    letter-spacing: $ls;
+}
+
+@mixin adaptiv-font ($pcSize, $mobSize) {
+    $addSize: $pcSize - $mobSize;
+    $addMobSize: $addSize + $addSize * 0.7;
+    @media (max-width: ($md2 + px)) {
+        font-size: calc(#{$mobSize + px} + #{$addMobSize} * ((100vw - 320px) / #{$maxWidthConteiner}));
+    } 
+    @media (min-width: ($md2 + px)) {
+        font-size: calc(#{$mobSize + px} + #{$addSize} * (100vw / #{$maxWidthConteiner}));
+    }
+}
+  // Миксины______________________________
+
+
+
+body { 
+    color:#EFEFEF;
+    background: #222224; 
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100%;
+}
+
+[class*="__conteiner"] {
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+    max-width: $md + px;
+}
