@@ -17,6 +17,7 @@ $md2: 767;
 $md3: 479;
 $black: #222224;
 $white: #EFEFEF;
+$grey: #E3E2E2;
 $orange: #EA4C14;
 
   // Переменные___________________________
@@ -43,6 +44,7 @@ $orange: #EA4C14;
         font-size: calc(#{$mobSize + px} + #{$addSize} * (100vw / #{$maxWidthConteiner}));
     }
 }
+
   // Миксины______________________________
 
 
