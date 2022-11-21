@@ -1,0 +1,9 @@
+
+.main {
+    flex: 1 1 auto;
+    margin-top: 200px;
+    color: white;
+}
+.text {
+    @include font(BebasNeue Bold, 700, 70px, 68px);
+}
