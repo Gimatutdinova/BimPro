@@ -112,6 +112,11 @@
     &__phone {
         @include font(Rubik, 500, 18px);
         color:$white;
+        transition: 0.5s ease 0s;
+        &:hover {
+            color: $orange;
+            transition: 0.5s ease 0s;
+        }
         @media screen and (max-width: ($md2 + px)) {
             display: none;
         }
@@ -120,6 +125,11 @@
     &__mail {
         @include font(Rubik, 500, 16px);
         color:$white;
+        transition: 0.5s ease 0s;
+        &:hover {
+            color: $orange;
+            transition: 0.5s ease 0s;
+        }
         @media screen and (max-width: ($md2 + px)) {
             display: none;
         }
@@ -132,9 +142,11 @@
         height: 30px;     
         fill: $white;
         cursor: pointer;
+        transition: 0.5s ease 0s;
 
         &:hover {
             fill: $orange;
+            transition: 0.5s ease 0s;
         }
         @media screen and (max-width: ($md2 + px)) {
             display: block;
